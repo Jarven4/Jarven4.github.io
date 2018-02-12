@@ -1,44 +1,35 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
-    <title>Hello</title>
-    <link href="./Hello_files/index.css" rel="stylesheet">
+<title>Hello</title>
+  <script>
+          function checkPassword(){
+		  var password="123";
+       	 	  var getPassword=document.getElementById("password").value;
+      	          if(getPassword == password){  
+			  document.getElementById("result").value='Welcome';
+                  }else{
+			  document.getElementById("result").value='Please enter the password!';
+		  }
+			
+          }
+  </script>
 </head>
 <body>
-    <!--面板-->
-    <div id="panel">
-        <!--面板的顶部-->
-        <div class="panel-top">
-            <h2>Hello</h2>
-        </div>
-        <!--面板的主要内容-->
-        <div class="panel-content">
-            <div class="int">
-                <label><img src="./Hello_files/icon_people.png" width="28" height="25"></label>
-                <input type="text" placeholder="您的邮箱/用户名">
-            </div>
-            <div class="int">
-                <label><img src="./Hello_files/icon_password.png" width="28" height="25"></label>
-                <input type="password" placeholder="输入密码">
-            </div>
-            <div class="pwd-login">
-                <a href="https://larms.github.io/#"><input type="checkbox"> 自动登录</a>
-                <a href="https://larms.github.io/#" class="forget-pwd">忘记密码?</a>
-            </div>
-            <div class="login">
-                <button>登录</button>
-            </div>
-            <div class="reg">
-                没有账号?<a href="https://larms.github.io/#">立即注册</a>
-            </div>
-        </div>
-        <!--面板的底部-->
-        <div class="panel-bottom">
-            <span>社交账号登陆:  </span>
-            <img src="./Hello_files/qq.png">
-            <img src="./Hello_files/weixin.png">
-			<img src="./Hello_files/sina.png">
-        </div>
-    </div>
+	
+ <div >
+  <label>密 码：</label>
+  <input type="password" id="password" name="password"/>
+ </div>
+
+<div>
+  <label>结果：</label>
+  <input type="text" name="result" id="result" />
+ </div>
+ 
+ <div class="login" >
+  <input name="a" type="submit" value="登 录"  onclick="checkPassword();"/>
+ </div>
+
 
 </body></html>
